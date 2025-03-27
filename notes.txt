@@ -1,0 +1,18 @@
+* system ID and component ID are avialable on
+/px4_*/fmu/out/vehicle_status_v1
+
+arming_state
+uint8 ARMING_STATE_DISARMED = 1
+uint8 ARMING_STATE_ARMED    = 2
+
+
+system_id
+component_id
+
+the topic may appear there but it's not longer available. before calling it we should check if it's still available
+
+
+Issue:
+
+first time arming it arms and goes into takeoff mode when launching
+second time after arming and launching it goes into hold mode
