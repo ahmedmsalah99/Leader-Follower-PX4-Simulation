@@ -31,7 +31,8 @@ def launch_setup(context, *args, **kwargs):
             name=f'drone_election_{drone_id}_node',
             parameters=[{
                 'drone_id': drone_id,
-                'priority': priority
+                'priority': priority,
+                'cluster_drones_number':num_drones
             }]
         )
         drone_nodes.append(drone_election_node)
