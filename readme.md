@@ -13,6 +13,14 @@ This project simulates a simple leader-follower drone swarm using **PX4**, **ROS
 - **MAVLink to ROS2 bridging** via Micro XRCE-DDS
 - **Mission upload and follow behavior**
 
+## 📊 Example Results
+
+Below is a demonstration of the leader-follower swarm behavior in action. The leader (elected automatically) moves along a mission path, and the follower drones track and follow its movements in offboard mode.
+
+<p align="center">
+  <img src="resources/leader_follower2.gif" alt="Leader-Follower Simulation" width="600"/>
+</p>
+
 ## 🧰 Project Structure
 
 ```
