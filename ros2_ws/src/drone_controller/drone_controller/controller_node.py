@@ -114,7 +114,7 @@ class DroneController(Node):
         @wraps(func)
         def wrapper(self, *args, **kwargs):
             if self.current_status is None:
-                self.get_logger().warn('No status updates received yet',throttle_duration_sec=1)
+                self.get_logger().warn('No status updates received yet',throttle_duration_sec=3)
                 return None  # or raise an exception if preferred
             return func(self, *args, **kwargs)
         return wrapper
@@ -127,7 +127,7 @@ class DroneController(Node):
         """Periodic update function"""
         # Safety checks
         if self.current_status.failsafe:
-            self.get_logger().error('Failsafe triggered!',throttle_duration_sec=1)
+            self.get_logger().error('Failsafe triggered!',throttle_duration_sec=3)
             return
         if self.udp_out is not None:
             self.udp_out.mav.heartbeat_send(mavutil.mavlink.MAV_TYPE_QUADROTOR,
@@ -135,7 +135,7 @@ class DroneController(Node):
                                                   self.is_swarm_participant, mavutil.mavlink.MAV_STATE_ACTIVE)
         
         if self.battery_status is not None and self.battery_status.remaining < self.MIN_BATTERY_LEVEL:
-            self.get_logger().warn('Low battery!',throttle_duration_sec=1)
+            self.get_logger().warn('Low battery!',throttle_duration_sec=3)
             self._handle_low_battery()
 
         if self.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
@@ -149,11 +149,11 @@ class DroneController(Node):
                 self.follow_leader()
         
         except Exception as e:
-            self.get_logger().error(f'Error in state machine update: {str(e)}',throttle_duration_sec=1)
+            self.get_logger().error(f'Error in state machine update: {str(e)}',throttle_duration_sec=3)
 
     def perform_leader_work(self):
         if self.current_position is None:
-            self.get_logger().warn('No position available yet',throttle_duration_sec=1)
+            self.get_logger().warn('No position available yet',throttle_duration_sec=3)
             return
         
     
@@ -165,19 +165,19 @@ class DroneController(Node):
         # Check if leader position exists and timestamp is not expired
         if (leader_pos is None or 
             leader_pos.timestamp == 0):
-            self.get_logger().warn('No valid leader position available',throttle_duration_sec=1)
+            self.get_logger().warn('No valid leader position available',throttle_duration_sec=3)
             return
         
         current_time = self.get_clock().now().nanoseconds // 1000
         is_timed_out = (current_time - leader_pos.timestamp) > 2000000 # 2 second timeout
 
         if is_timed_out:
-            self.get_logger().warn('Leader position timed out',throttle_duration_sec=1)
+            self.get_logger().warn('Leader position timed out',throttle_duration_sec=3)
             return
         
         # If not armed, or the drone is not in the air, don't follow
         if self.arming_state != VehicleStatus.ARMING_STATE_ARMED or (-self.current_position.z < self.POSITION_THRESHOLD and self.nav_state != VehicleStatus.NAVIGATION_STATE_OFFBOARD):
-            self.get_logger().warn(f'Drone not armed or not in the air',throttle_duration_sec=1)
+            self.get_logger().warn(f'Drone not armed or not in the air',throttle_duration_sec=3)
             return
 
         # If the drone is on hold, switch to offboard mode
@@ -199,6 +199,7 @@ class DroneController(Node):
         offboard_msg.yaw = leader_pos.heading  # Maintain same heading as leader
 
         self.trajectory_setpoint_publisher.publish(offboard_msg)
+        self.get_logger().warn('Following leader',throttle_duration_sec=3)
 
     def publish_offboard_control_mode(self):
         """Publish offboard control mode message"""
@@ -338,7 +339,7 @@ class DroneController(Node):
 
     def _handle_low_battery(self):
         """Handle low battery conditions"""
-        self.get_logger().warn('Low battery - Initiating return to launch',throttle_duration_sec=1)
+        self.get_logger().warn('Low battery - Initiating return to launch',throttle_duration_sec=3)
         self.publish_vehicle_command(
             VehicleCommand.VEHICLE_CMD_NAV_RETURN_TO_LAUNCH,
             param1=self.TAKEOFF_ALT

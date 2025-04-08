@@ -14,7 +14,7 @@ def launch_setup(context, *args, **kwargs):
     
     # Validate priorities
     if not isinstance(priorities, list) or len(priorities) != num_drones:
-        raise ValueError("Priorities must be a list of length equal to num_drones")
+        priorities = [i for i in range(num_drones)]
     
     # List to hold the drone nodes
     drone_nodes = []
@@ -49,7 +49,7 @@ def generate_launch_description():
     
     priorities_arg = DeclareLaunchArgument(
         'priorities',
-        default_value='[10, 9, 8]',
+        default_value='[]',
         description='List of priorities for each drone'
     )
     

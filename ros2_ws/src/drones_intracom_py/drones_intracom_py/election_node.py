@@ -98,8 +98,9 @@ class ElectionNode(Node):
         if self.is_leader():
             self.leader_work()
         else:
-            if self.leader_heartbeat_time is not None and time.time() - self.leader_heartbeat_time > 1:
+            if self.leader_heartbeat_time is not None and time.time() - self.leader_heartbeat_time > 3:
                 # time out, no leader
+                self.get_logger().warn(f'Timeout time difference is {time.time() - self.leader_heartbeat_time}, no leader')
                 self.leader_id = None
                 self.start_election()
         
@@ -187,7 +188,7 @@ class ElectionNode(Node):
 
     def wait_for_responses(self):
         """Wait for a certain time to see if a higher-priority drone responds"""
-        time.sleep(5)
+        time.sleep(10)
         if self.is_swarm_participant and not self.leader_potential_showed_up:
             self.declare_leader()
         time.sleep(5)
@@ -217,7 +218,7 @@ class ElectionNode(Node):
         if self.leader_id is None or msg.get_srcSystem() != self.leader_id:
             return
         if msg.system_status == mavutil.mavlink.MAV_STATE_STANDBY or msg.system_status == mavutil.mavlink.MAV_STATE_ACTIVE:
-            self.get_logger().info(f"leader {self.leader_id} active",throttle_duration_sec=1)
+            self.get_logger().info(f"leader {self.leader_id} active",throttle_duration_sec=3)
             self.leader_heartbeat_time = time.time()
 
     def handle_leader_msg(self,msg):

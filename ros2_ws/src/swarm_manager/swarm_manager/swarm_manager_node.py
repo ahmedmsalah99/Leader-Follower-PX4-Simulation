@@ -66,7 +66,7 @@ class SwarmManager(Node):
 
     def _leader_pose_callback(self, msg):
         self.leader_id = msg.system_id
-        self.get_logger().info(f"leader id: {self.leader_id}",throttle_duration_sec=1)
+        self.get_logger().info(f"leader id: {self.leader_id}",throttle_duration_sec=3)
 
     def update(self):
         msg = self.udp_in.recv_match(blocking=False)
