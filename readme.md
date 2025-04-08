@@ -30,13 +30,14 @@ Leader-Follower-PX4-Simulation/
 ## 🚀 Getting Started
 
 > **Prerequisite:** Make sure `QGroundControl.AppImage` is placed inside the `SITL/` folder.
+> cd to the automation_scripts folder
 
 ### 1. Initialize GCS and Micro XRCE-DDS
 
 This sets up QGroundControl and MAVLink to ROS2 bridge:
 
 ```bash
-./automation_scripts/init.sh
+./init.sh
 ```
 
 ### 2. Launch PX4 Gazebo Simulation
@@ -44,7 +45,7 @@ This sets up QGroundControl and MAVLink to ROS2 bridge:
 This starts a clean simulation with the desired number of drones:
 
 ```bash
-./automation_scripts/launch.sh -n <drones_num> [-h]
+./launch.sh -n <drones_num> [-h]
 ```
 
 - `-n <drones_num>`: Number of drones to simulate
@@ -58,7 +59,7 @@ Starts ROS2 nodes that:
 - Handle leader election
 
 ```bash
-./automation_scripts/start_system.sh -n <drones_num>
+./start_system.sh -n <drones_num>
 ```
 
 > Drones are assigned priorities based on their number (modifiable in the script).
@@ -68,7 +69,7 @@ Starts ROS2 nodes that:
 Once drones are hovering and the leader is elected, you can send commands:
 
 ```bash
-./automation_scripts/command_drone.sh
+./command_drone.sh
 ```
 
 ## 📋 Typical Usage Flow
@@ -80,22 +81,16 @@ Once drones are hovering and the leader is elected, you can send commands:
 5. Upload a mission to the leader drone using QGroundControl
 6. Start the mission – follower drones will follow the leader in real time
 
-## 🧪 Mission Testing Script
+## 🧪 Additinal Script
 
-You can also use `test_mission.py` to automate mission handling:
+You can also use `test_mission.py` to download a mission from drone 1 and upload it to 2 
 
-```bash
-python3 test_mission.py
-```
-
-- Downloads or uploads missions to the drones
-- Useful for automated testing and validation
 
 ## 🛠 Notes
 
 - Tested with **Gazebo Harmonic**
 - QGroundControl is launched via AppImage; ensure it exists in `SITL/`
-- Leader election is automatic, but script can be modified to use manual priorities
+- Leader election is automatic, but the automation script can be modified to use manual priorities
 
 ---
 
@@ -109,5 +104,3 @@ Pull requests and suggestions are welcome!
 
 [MIT License](LICENSE)
 ```
-
-Let me know if you'd like me to generate a proper license file or add installation instructions and dependencies (e.g., `rosdep`, `colcon`, PX4 setup steps, etc.)!
