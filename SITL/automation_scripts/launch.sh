@@ -45,6 +45,8 @@ for ((i = 1; i <= NUM_DRONES; i++)); do
     fi
     if [ "$i" -eq 1 ]; then
         sleep 5
+    else
+        sleep 3
     fi
 
 done
