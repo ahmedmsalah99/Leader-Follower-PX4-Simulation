@@ -1,0 +1,33 @@
+running egg_info
+creating ../../../build/drones_intracom_py/drones_intracom_py.egg-info
+writing ../../../build/drones_intracom_py/drones_intracom_py.egg-info/PKG-INFO
+writing dependency_links to ../../../build/drones_intracom_py/drones_intracom_py.egg-info/dependency_links.txt
+writing entry points to ../../../build/drones_intracom_py/drones_intracom_py.egg-info/entry_points.txt
+writing requirements to ../../../build/drones_intracom_py/drones_intracom_py.egg-info/requires.txt
+writing top-level names to ../../../build/drones_intracom_py/drones_intracom_py.egg-info/top_level.txt
+writing manifest file '../../../build/drones_intracom_py/drones_intracom_py.egg-info/SOURCES.txt'
+reading manifest file '../../../build/drones_intracom_py/drones_intracom_py.egg-info/SOURCES.txt'
+writing manifest file '../../../build/drones_intracom_py/drones_intracom_py.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/stark/stuff/Projects/LeaderFollower/build/drones_intracom_py/build/lib/drones_intracom_py
+copying drones_intracom_py/__init__.py -> /home/stark/stuff/Projects/LeaderFollower/build/drones_intracom_py/build/lib/drones_intracom_py
+copying drones_intracom_py/election_node.py -> /home/stark/stuff/Projects/LeaderFollower/build/drones_intracom_py/build/lib/drones_intracom_py
+running install
+running install_lib
+creating /home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/lib/python3.10/site-packages/drones_intracom_py
+copying /home/stark/stuff/Projects/LeaderFollower/build/drones_intracom_py/build/lib/drones_intracom_py/__init__.py -> /home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/lib/python3.10/site-packages/drones_intracom_py
+copying /home/stark/stuff/Projects/LeaderFollower/build/drones_intracom_py/build/lib/drones_intracom_py/election_node.py -> /home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/lib/python3.10/site-packages/drones_intracom_py
+byte-compiling /home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/lib/python3.10/site-packages/drones_intracom_py/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/lib/python3.10/site-packages/drones_intracom_py/election_node.py to election_node.cpython-310.pyc
+running install_data
+creating /home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/ament_index/resource_index/packages
+copying resource/drones_intracom_py -> /home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/ament_index/resource_index/packages
+copying package.xml -> /home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/drones_intracom_py
+creating /home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/drones_intracom_py/launch
+copying launch/swarm_launch.py -> /home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/drones_intracom_py/launch
+running install_egg_info
+Copying ../../../build/drones_intracom_py/drones_intracom_py.egg-info to /home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/lib/python3.10/site-packages/drones_intracom_py-0.0.0-py3.10.egg-info
+running install_scripts
+Installing election_node script to /home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/lib/drones_intracom_py
+writing list of installed files to '/home/stark/stuff/Projects/LeaderFollower/build/drones_intracom_py/install.log'

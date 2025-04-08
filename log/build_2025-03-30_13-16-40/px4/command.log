@@ -1,0 +1,6 @@
+Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/px4': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/stark/stuff/Projects/LeaderFollower/SITL/PX4-Autopilot -DCMAKE_INSTALL_PREFIX=/home/stark/stuff/Projects/LeaderFollower/install/px4
+Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/px4' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/stark/stuff/Projects/LeaderFollower/SITL/PX4-Autopilot -DCMAKE_INSTALL_PREFIX=/home/stark/stuff/Projects/LeaderFollower/install/px4
+Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/px4': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/stark/stuff/Projects/LeaderFollower/build/px4 -- -j16 -l16
+Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/px4' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/stark/stuff/Projects/LeaderFollower/build/px4 -- -j16 -l16
+Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/px4': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/stark/stuff/Projects/LeaderFollower/build/px4
+Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/px4' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/stark/stuff/Projects/LeaderFollower/build/px4

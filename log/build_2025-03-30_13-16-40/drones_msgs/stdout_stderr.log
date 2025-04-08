@@ -1,0 +1,328 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/lib/ccache/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found px4_msgs: 2.0.1 (/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/cmake)
+-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+-- Found PythonExtra: .so  
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/stark/stuff/Projects/LeaderFollower/build/drones_msgs
+[  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  5%] [32mBuilding C object CMakeFiles/drones_msgs__rosidl_generator_c.dir/rosidl_generator_c/drones_msgs/msg/detail/election__functions.c.o[0m
+[  7%] [32mBuilding C object CMakeFiles/drones_msgs__rosidl_generator_c.dir/rosidl_generator_c/drones_msgs/msg/detail/leader__functions.c.o[0m
+[  7%] Built target drones_msgs__cpp
+[ 10%] [32mBuilding C object CMakeFiles/drones_msgs__rosidl_generator_c.dir/rosidl_generator_c/drones_msgs/msg/detail/leaderpos__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/drones_msgs__rosidl_generator_c.dir/rosidl_generator_c/drones_msgs/srv/detail/unset_leader__functions.c.o[0m
+[ 10%] Built target ament_cmake_python_copy_drones_msgs
+[ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[ 14%] [32m[1mLinking C shared library libdrones_msgs__rosidl_generator_c.so[0m
+[ 14%] Built target drones_msgs__rosidl_generator_c
+running egg_info
+creating drones_msgs.egg-info
+[ 16%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drones_msgs/msg/detail/leader__type_support.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drones_msgs/msg/detail/election__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drones_msgs/srv/detail/unset_leader__type_support.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drones_msgs/msg/detail/leaderpos__type_support.cpp.o[0m
+[ 23%] [32m[1mLinking CXX shared library libdrones_msgs__rosidl_typesupport_introspection_cpp.so[0m
+writing drones_msgs.egg-info/PKG-INFO
+writing dependency_links to drones_msgs.egg-info/dependency_links.txt
+writing top-level names to drones_msgs.egg-info/top_level.txt
+writing manifest file 'drones_msgs.egg-info/SOURCES.txt'
+reading manifest file 'drones_msgs.egg-info/SOURCES.txt'
+writing manifest file 'drones_msgs.egg-info/SOURCES.txt'
+[ 23%] Built target drones_msgs__rosidl_typesupport_introspection_cpp
+[ 23%] Built target ament_cmake_python_build_drones_msgs_egg
+[ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 27%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/drones_msgs/msg/election__type_support.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/drones_msgs/msg/leader__type_support.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/drones_msgs/srv/unset_leader__type_support.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/drones_msgs/msg/leaderpos__type_support.cpp.o[0m
+[ 36%] [32m[1mLinking CXX shared library libdrones_msgs__rosidl_typesupport_c.so[0m
+[ 38%] [32mBuilding C object CMakeFiles/drones_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drones_msgs/msg/detail/election__type_support.c.o[0m
+[ 40%] [32mBuilding C object CMakeFiles/drones_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drones_msgs/msg/detail/leader__type_support.c.o[0m
+[ 41%] [32mBuilding C object CMakeFiles/drones_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drones_msgs/srv/detail/unset_leader__type_support.c.o[0m
+[ 41%] Built target drones_msgs__rosidl_typesupport_c
+[ 43%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 45%] [32mBuilding C object CMakeFiles/drones_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drones_msgs/msg/detail/leaderpos__type_support.c.o[0m
+[ 47%] [32m[1mLinking C shared library libdrones_msgs__rosidl_typesupport_introspection_c.so[0m
+[ 47%] Built target drones_msgs__rosidl_typesupport_introspection_c
+[ 49%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drones_msgs/msg/detail/election__type_support_c.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drones_msgs/msg/detail/leader__type_support_c.cpp.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drones_msgs/srv/detail/unset_leader__type_support_c.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drones_msgs/srv/detail/dds_fastrtps/unset_leader__type_support.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drones_msgs/msg/detail/leaderpos__type_support_c.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drones_msgs/msg/detail/dds_fastrtps/election__type_support.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drones_msgs/msg/detail/dds_fastrtps/leader__type_support.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drones_msgs/msg/detail/dds_fastrtps/leaderpos__type_support.cpp.o[0m
+[ 65%] [32m[1mLinking CXX shared library libdrones_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[ 67%] [32m[1mLinking CXX shared library libdrones_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 67%] Built target drones_msgs__rosidl_typesupport_fastrtps_c
+[ 67%] Built target drones_msgs__rosidl_typesupport_fastrtps_cpp
+[ 69%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drones_msgs/msg/election__type_support.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drones_msgs/msg/leaderpos__type_support.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drones_msgs/srv/unset_leader__type_support.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/drones_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drones_msgs/msg/leader__type_support.cpp.o[0m
+[ 78%] [32m[1mLinking CXX shared library libdrones_msgs__rosidl_typesupport_cpp.so[0m
+[ 78%] Built target drones_msgs__rosidl_typesupport_cpp
+[ 78%] Built target drones_msgs
+[ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 80%] Built target drones_msgs__py
+[ 87%] [32mBuilding C object CMakeFiles/drones_msgs__rosidl_generator_py.dir/rosidl_generator_py/drones_msgs/msg/_leader_s.c.o[0m
+[ 87%] [32mBuilding C object CMakeFiles/drones_msgs__rosidl_generator_py.dir/rosidl_generator_py/drones_msgs/srv/_unset_leader_s.c.o[0m
+[ 87%] [32mBuilding C object CMakeFiles/drones_msgs__rosidl_generator_py.dir/rosidl_generator_py/drones_msgs/msg/_leaderpos_s.c.o[0m
+[ 87%] [32mBuilding C object CMakeFiles/drones_msgs__rosidl_generator_py.dir/rosidl_generator_py/drones_msgs/msg/_election_s.c.o[0m
+[ 89%] [32m[1mLinking C shared library rosidl_generator_py/drones_msgs/libdrones_msgs__rosidl_generator_py.so[0m
+[ 89%] Built target drones_msgs__rosidl_generator_py
+[ 92%] [32mBuilding C object CMakeFiles/drones_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/drones_msgs/_drones_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/drones_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/drones_msgs/_drones_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/drones_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/drones_msgs/_drones_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/drones_msgs/drones_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/drones_msgs/drones_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/drones_msgs/drones_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] Built target drones_msgs__rosidl_typesupport_fastrtps_c__pyext
+[100%] Built target drones_msgs__rosidl_typesupport_introspection_c__pyext
+[100%] Built target drones_msgs__rosidl_typesupport_c__pyext
+-- Install configuration: ""
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/ament_index/resource_index/rosidl_interfaces/drones_msgs
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail/unset_leader__struct.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail/unset_leader__functions.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail/unset_leader__type_support.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail/unset_leader__functions.c
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/unset_leader.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leaderpos__functions.c
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/election__type_support.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leader__struct.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/election__struct.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leaderpos__type_support.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leader__functions.c
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leader__functions.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/election__functions.c
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leaderpos__struct.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leaderpos__functions.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/election__functions.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leader__type_support.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/election.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/leaderpos.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/leader.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/environment/library_path.sh
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/environment/library_path.dsv
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_generator_c.so
+-- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_generator_c.so" to ""
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail/unset_leader__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/election__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leaderpos__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leader__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_typesupport_fastrtps_c.so
+-- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail/unset_leader__rosidl_typesupport_introspection_c.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail/unset_leader__type_support.c
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/election__rosidl_typesupport_introspection_c.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/election__type_support.c
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leaderpos__rosidl_typesupport_introspection_c.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leader__type_support.c
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leader__rosidl_typesupport_introspection_c.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leaderpos__type_support.c
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_typesupport_introspection_c.so
+-- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_typesupport_c.so
+-- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_typesupport_c.so" to ""
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail/unset_leader__traits.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail/unset_leader__type_support.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail/unset_leader__builder.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail/unset_leader__struct.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/unset_leader.hpp
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leaderpos__builder.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leader__traits.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leaderpos__type_support.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/election__struct.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/election__traits.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leader__struct.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leaderpos__struct.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leaderpos__traits.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leader__builder.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leader__type_support.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/election__type_support.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/election__builder.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/leader.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/leaderpos.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/election.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail/dds_fastrtps
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail/unset_leader__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leader__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/dds_fastrtps
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/election__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leaderpos__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_typesupport_fastrtps_cpp.so
+-- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail/unset_leader__type_support.cpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/srv/detail/unset_leader__rosidl_typesupport_introspection_cpp.hpp
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg
+-- Up-to-date: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leaderpos__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/election__type_support.cpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leader__type_support.cpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leader__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/leaderpos__type_support.cpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/include/drones_msgs/drones_msgs/msg/detail/election__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_typesupport_introspection_cpp.so
+-- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_typesupport_cpp.so
+-- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_typesupport_cpp.so" to ""
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/environment/pythonpath.sh
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/environment/pythonpath.dsv
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs-0.0.0-py3.10.egg-info
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs-0.0.0-py3.10.egg-info/top_level.txt
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/__init__.py
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/_drones_msgs_s.ep.rosidl_typesupport_c.c
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/_drones_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/drones_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/libdrones_msgs__rosidl_generator_py.so
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/srv
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/srv/_unset_leader_s.c
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/srv/__init__.py
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/srv/_unset_leader.py
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/drones_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/drones_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/_drones_msgs_s.ep.rosidl_typesupport_introspection_c.c
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/msg
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/msg/__init__.py
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/msg/_leaderpos.py
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/msg/_election.py
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/msg/_election_s.c
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/msg/_leaderpos_s.c
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/msg/_leader_s.c
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/msg/_leader.py
+Listing '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs'...
+Compiling '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/__init__.py'...
+Listing '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/msg'...
+Compiling '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/msg/__init__.py'...
+Compiling '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/msg/_election.py'...
+Compiling '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/msg/_leader.py'...
+Compiling '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/msg/_leaderpos.py'...
+Listing '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/srv'...
+Compiling '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/srv/__init__.py'...
+Compiling '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/srv/_unset_leader.py'...
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/drones_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/drones_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/drones_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/drones_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/drones_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages/drones_msgs/drones_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_generator_py.so
+-- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/libdrones_msgs__rosidl_generator_py.so" to ""
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/msg/Election.idl
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/msg/Leader.idl
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/msg/Leaderpos.idl
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/srv/UnsetLeader.idl
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/msg/Election.msg
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/msg/Leader.msg
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/msg/Leaderpos.msg
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/srv/UnsetLeader.srv
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/srv/UnsetLeader_Request.msg
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/srv/UnsetLeader_Response.msg
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/ament_index/resource_index/package_run_dependencies/drones_msgs
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/ament_index/resource_index/parent_prefix_path/drones_msgs
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/environment/ament_prefix_path.sh
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/environment/ament_prefix_path.dsv
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/environment/path.sh
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/environment/path.dsv
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/local_setup.bash
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/local_setup.sh
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/local_setup.zsh
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/local_setup.dsv
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/package.dsv
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/ament_index/resource_index/packages/drones_msgs
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/export_drones_msgs__rosidl_generator_cExport.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/export_drones_msgs__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/export_drones_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/export_drones_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/drones_msgs__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/drones_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/drones_msgs__rosidl_typesupport_cExport.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/drones_msgs__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/export_drones_msgs__rosidl_generator_cppExport.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/export_drones_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/export_drones_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/drones_msgs__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/drones_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/drones_msgs__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/drones_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/export_drones_msgs__rosidl_generator_pyExport.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/export_drones_msgs__rosidl_generator_pyExport-noconfig.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/rosidl_cmake-extras.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/drones_msgsConfig.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/cmake/drones_msgsConfig-version.cmake
+-- Installing: /home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/package.xml

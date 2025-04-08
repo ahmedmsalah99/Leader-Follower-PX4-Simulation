@@ -1,0 +1,596 @@
+[0.257s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.257s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7611a449faf0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7611a4455960>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7611a4455960>>, mixin_verb=('build',))
+[0.339s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.340s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.340s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.340s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.340s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.340s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.340s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/stark/stuff/Projects/LeaderFollower'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(SITL) by extensions ['ignore', 'ignore_ament_install']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(SITL) by extension 'ignore'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(SITL) by extension 'ignore_ament_install'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(SITL) by extensions ['colcon_pkg']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(SITL) by extension 'colcon_pkg'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(SITL) by extensions ['colcon_meta']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(SITL) by extension 'colcon_meta'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(SITL) by extensions ['ros']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(SITL) by extension 'ros'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(SITL) by extensions ['cmake', 'python']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(SITL) by extension 'cmake'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(SITL) by extension 'python'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(SITL) by extensions ['python_setup_py']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(SITL) by extension 'python_setup_py'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/Micro-XRCE-DDS-Agent) by extensions ['ignore', 'ignore_ament_install']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/Micro-XRCE-DDS-Agent) by extension 'ignore'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/Micro-XRCE-DDS-Agent) by extension 'ignore_ament_install'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/Micro-XRCE-DDS-Agent) by extensions ['colcon_pkg']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/Micro-XRCE-DDS-Agent) by extension 'colcon_pkg'
+[0.386s] INFO:colcon.colcon_metadata.metadata.colcon_pkg:Setting type 'cmake' of package 'SITL/Micro-XRCE-DDS-Agent' from colcon.pkg
+[0.386s] INFO:colcon.colcon_metadata.metadata.colcon_pkg:Setting name 'microxrcedds_agent' of package 'SITL/Micro-XRCE-DDS-Agent' from colcon.pkg
+[0.386s] DEBUG:colcon.colcon_core.package_identification:Package 'SITL/Micro-XRCE-DDS-Agent' with type 'cmake' and name 'microxrcedds_agent'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/PX4-Autopilot) by extensions ['ignore', 'ignore_ament_install']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/PX4-Autopilot) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/PX4-Autopilot) by extension 'ignore_ament_install'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/PX4-Autopilot) by extensions ['colcon_pkg']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/PX4-Autopilot) by extension 'colcon_pkg'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/PX4-Autopilot) by extensions ['colcon_meta']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/PX4-Autopilot) by extension 'colcon_meta'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/PX4-Autopilot) by extensions ['ros']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/PX4-Autopilot) by extension 'ros'
+[0.393s] DEBUG:colcon.colcon_core.package_identification:Package 'SITL/PX4-Autopilot' with type 'ros.ament_cmake' and name 'px4'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/automation_scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/automation_scripts) by extension 'ignore'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/automation_scripts) by extension 'ignore_ament_install'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/automation_scripts) by extensions ['colcon_pkg']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/automation_scripts) by extension 'colcon_pkg'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/automation_scripts) by extensions ['colcon_meta']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/automation_scripts) by extension 'colcon_meta'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/automation_scripts) by extensions ['ros']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/automation_scripts) by extension 'ros'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/automation_scripts) by extensions ['cmake', 'python']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/automation_scripts) by extension 'cmake'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/automation_scripts) by extension 'python'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/automation_scripts) by extensions ['python_setup_py']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/automation_scripts) by extension 'python_setup_py'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/missions) by extensions ['ignore', 'ignore_ament_install']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/missions) by extension 'ignore'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/missions) by extension 'ignore_ament_install'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/missions) by extensions ['colcon_pkg']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/missions) by extension 'colcon_pkg'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/missions) by extensions ['colcon_meta']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/missions) by extension 'colcon_meta'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/missions) by extensions ['ros']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/missions) by extension 'ros'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/missions) by extensions ['cmake', 'python']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/missions) by extension 'cmake'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/missions) by extension 'python'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/missions) by extensions ['python_setup_py']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(SITL/missions) by extension 'python_setup_py'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['ignore', 'ignore_ament_install']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'ignore'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'ignore_ament_install'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['colcon_pkg']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'colcon_pkg'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['colcon_meta']
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'colcon_meta'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['ros']
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'ros'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['cmake', 'python']
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'cmake'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'python'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['python_setup_py']
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'python_setup_py'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/build) by extensions ['ignore', 'ignore_ament_install']
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/build) by extension 'ignore'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/build) ignored
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/install) by extensions ['ignore', 'ignore_ament_install']
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/install) by extension 'ignore'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/install) ignored
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/log) by extensions ['ignore', 'ignore_ament_install']
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/log) by extension 'ignore'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/log) ignored
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'ignore'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'ignore_ament_install'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['colcon_pkg']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'colcon_pkg'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['colcon_meta']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'colcon_meta'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['ros']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'ros'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['cmake', 'python']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'cmake'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'python'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['python_setup_py']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'python_setup_py'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drone_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drone_controller) by extension 'ignore'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drone_controller) by extension 'ignore_ament_install'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drone_controller) by extensions ['colcon_pkg']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drone_controller) by extension 'colcon_pkg'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drone_controller) by extensions ['colcon_meta']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drone_controller) by extension 'colcon_meta'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drone_controller) by extensions ['ros']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drone_controller) by extension 'ros'
+[0.403s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/drone_controller' with type 'ros.ament_python' and name 'drone_controller'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_intracom_py) by extensions ['ignore', 'ignore_ament_install']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_intracom_py) by extension 'ignore'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_intracom_py) by extension 'ignore_ament_install'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_intracom_py) by extensions ['colcon_pkg']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_intracom_py) by extension 'colcon_pkg'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_intracom_py) by extensions ['colcon_meta']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_intracom_py) by extension 'colcon_meta'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_intracom_py) by extensions ['ros']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_intracom_py) by extension 'ros'
+[0.406s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/drones_intracom_py' with type 'ros.ament_python' and name 'drones_intracom_py'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_msgs) by extension 'ignore'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_msgs) by extension 'ignore_ament_install'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_msgs) by extensions ['colcon_pkg']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_msgs) by extension 'colcon_pkg'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_msgs) by extensions ['colcon_meta']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_msgs) by extension 'colcon_meta'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_msgs) by extensions ['ros']
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/drones_msgs) by extension 'ros'
+[0.408s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/drones_msgs' with type 'ros.ament_cmake' and name 'drones_msgs'
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_msgs) by extension 'ignore'
+[0.409s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_msgs) by extension 'ignore_ament_install'
+[0.409s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_msgs) by extensions ['colcon_pkg']
+[0.409s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_msgs) by extension 'colcon_pkg'
+[0.409s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_msgs) by extensions ['colcon_meta']
+[0.409s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_msgs) by extension 'colcon_meta'
+[0.409s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_msgs) by extensions ['ros']
+[0.409s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_msgs) by extension 'ros'
+[0.411s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/px4_msgs' with type 'ros.ament_cmake' and name 'px4_msgs'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_ros_com) by extensions ['ignore', 'ignore_ament_install']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_ros_com) by extension 'ignore'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_ros_com) by extension 'ignore_ament_install'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_ros_com) by extensions ['colcon_pkg']
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_ros_com) by extension 'colcon_pkg'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_ros_com) by extensions ['colcon_meta']
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_ros_com) by extension 'colcon_meta'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_ros_com) by extensions ['ros']
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/px4_ros_com) by extension 'ros'
+[0.414s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/px4_ros_com' with type 'ros.ament_cmake' and name 'px4_ros_com'
+[0.414s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.415s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.415s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.415s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.415s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.457s] INFO:colcon.colcon_metadata.metadata.colcon_pkg:Updating descriptor of package 'SITL/Micro-XRCE-DDS-Agent' from colcon.pkg: {'name': 'microxrcedds_agent', 'type': 'cmake', 'dependencies': ['fastcdr', 'fastdds'], 'cmake-args': ['-DUAGENT_ISOLATED_INSTALL=OFF', '-DUAGENT_USE_SYSTEM_FASTCDR=ON', '-DUAGENT_USE_SYSTEM_FASTDDS=ON']}
+[0.461s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.462s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.470s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 337 installed packages in /opt/ros/humble
+[0.473s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'cmake_args' from command line to 'None'
+[0.566s] Level 5:colcon.colcon_core.verb:overwrite package 'microxrcedds_agent' build argument 'cmake_args' from package metadata with '['-DUAGENT_ISOLATED_INSTALL=OFF', '-DUAGENT_USE_SYSTEM_FASTCDR=ON', '-DUAGENT_USE_SYSTEM_FASTDDS=ON']' (before: 'None')
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'cmake_target' from command line to 'None'
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'cmake_clean_cache' from command line to 'False'
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'cmake_clean_first' from command line to 'False'
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'cmake_force_configure' from command line to 'False'
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'ament_cmake_args' from command line to 'None'
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'catkin_cmake_args' from command line to 'None'
+[0.567s] Level 5:colcon.colcon_core.verb:set package 'microxrcedds_agent' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.567s] DEBUG:colcon.colcon_core.verb:Building package 'microxrcedds_agent' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/stark/stuff/Projects/LeaderFollower/build/microxrcedds_agent', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DUAGENT_ISOLATED_INSTALL=OFF', '-DUAGENT_USE_SYSTEM_FASTCDR=ON', '-DUAGENT_USE_SYSTEM_FASTDDS=ON'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent', 'merge_install': False, 'path': '/home/stark/stuff/Projects/LeaderFollower/SITL/Micro-XRCE-DDS-Agent', 'symlink_install': False, 'test_result_base': None}
+[0.568s] Level 5:colcon.colcon_core.verb:set package 'px4' build argument 'cmake_args' from command line to 'None'
+[0.568s] Level 5:colcon.colcon_core.verb:set package 'px4' build argument 'cmake_target' from command line to 'None'
+[0.568s] Level 5:colcon.colcon_core.verb:set package 'px4' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.568s] Level 5:colcon.colcon_core.verb:set package 'px4' build argument 'cmake_clean_cache' from command line to 'False'
+[0.568s] Level 5:colcon.colcon_core.verb:set package 'px4' build argument 'cmake_clean_first' from command line to 'False'
+[0.568s] Level 5:colcon.colcon_core.verb:set package 'px4' build argument 'cmake_force_configure' from command line to 'False'
+[0.568s] Level 5:colcon.colcon_core.verb:set package 'px4' build argument 'ament_cmake_args' from command line to 'None'
+[0.568s] Level 5:colcon.colcon_core.verb:set package 'px4' build argument 'catkin_cmake_args' from command line to 'None'
+[0.568s] Level 5:colcon.colcon_core.verb:set package 'px4' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.568s] DEBUG:colcon.colcon_core.verb:Building package 'px4' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/stark/stuff/Projects/LeaderFollower/build/px4', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/stark/stuff/Projects/LeaderFollower/install/px4', 'merge_install': False, 'path': '/home/stark/stuff/Projects/LeaderFollower/SITL/PX4-Autopilot', 'symlink_install': False, 'test_result_base': None}
+[0.570s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_args' from command line to 'None'
+[0.570s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target' from command line to 'None'
+[0.570s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.570s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.570s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.570s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.570s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.570s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.570s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.570s] DEBUG:colcon.colcon_core.verb:Building package 'px4_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/stark/stuff/Projects/LeaderFollower/build/px4_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs', 'merge_install': False, 'path': '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/px4_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.572s] Level 5:colcon.colcon_core.verb:set package 'drones_msgs' build argument 'cmake_args' from command line to 'None'
+[0.572s] Level 5:colcon.colcon_core.verb:set package 'drones_msgs' build argument 'cmake_target' from command line to 'None'
+[0.572s] Level 5:colcon.colcon_core.verb:set package 'drones_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.572s] Level 5:colcon.colcon_core.verb:set package 'drones_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.572s] Level 5:colcon.colcon_core.verb:set package 'drones_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.572s] Level 5:colcon.colcon_core.verb:set package 'drones_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.572s] Level 5:colcon.colcon_core.verb:set package 'drones_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.572s] Level 5:colcon.colcon_core.verb:set package 'drones_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.572s] Level 5:colcon.colcon_core.verb:set package 'drones_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.572s] DEBUG:colcon.colcon_core.verb:Building package 'drones_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/stark/stuff/Projects/LeaderFollower/build/drones_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs', 'merge_install': False, 'path': '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/drones_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.573s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_args' from command line to 'None'
+[0.573s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_target' from command line to 'None'
+[0.573s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.573s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_clean_cache' from command line to 'False'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_clean_first' from command line to 'False'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_force_configure' from command line to 'False'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'ament_cmake_args' from command line to 'None'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'catkin_cmake_args' from command line to 'None'
+[0.574s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.574s] DEBUG:colcon.colcon_core.verb:Building package 'px4_ros_com' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com', 'merge_install': False, 'path': '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/px4_ros_com', 'symlink_install': False, 'test_result_base': None}
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'cmake_args' from command line to 'None'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'cmake_target' from command line to 'None'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.575s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.576s] DEBUG:colcon.colcon_core.verb:Building package 'drone_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/stark/stuff/Projects/LeaderFollower/build/drone_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller', 'merge_install': False, 'path': '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/drone_controller', 'symlink_install': False, 'test_result_base': None}
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'drones_intracom_py' build argument 'cmake_args' from command line to 'None'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'drones_intracom_py' build argument 'cmake_target' from command line to 'None'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'drones_intracom_py' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'drones_intracom_py' build argument 'cmake_clean_cache' from command line to 'False'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'drones_intracom_py' build argument 'cmake_clean_first' from command line to 'False'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'drones_intracom_py' build argument 'cmake_force_configure' from command line to 'False'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'drones_intracom_py' build argument 'ament_cmake_args' from command line to 'None'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'drones_intracom_py' build argument 'catkin_cmake_args' from command line to 'None'
+[0.577s] Level 5:colcon.colcon_core.verb:set package 'drones_intracom_py' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.577s] DEBUG:colcon.colcon_core.verb:Building package 'drones_intracom_py' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/stark/stuff/Projects/LeaderFollower/build/drones_intracom_py', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py', 'merge_install': False, 'path': '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/drones_intracom_py', 'symlink_install': False, 'test_result_base': None}
+[0.578s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.580s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.582s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/px4_msgs' with build type 'ament_cmake'
+[0.582s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/px4_msgs'
+[0.588s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.588s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.588s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.597s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/stark/stuff/Projects/LeaderFollower/SITL/Micro-XRCE-DDS-Agent'
+[0.598s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.598s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.604s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/stark/stuff/Projects/LeaderFollower/SITL/PX4-Autopilot' with build type 'ament_cmake'
+[0.604s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/stark/stuff/Projects/LeaderFollower/SITL/PX4-Autopilot'
+[0.605s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.605s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.621s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/px4_msgs -DCMAKE_INSTALL_PREFIX=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs
+[0.632s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/microxrcedds_agent': /usr/bin/cmake /home/stark/stuff/Projects/LeaderFollower/SITL/Micro-XRCE-DDS-Agent -DUAGENT_ISOLATED_INSTALL=OFF -DUAGENT_USE_SYSTEM_FASTCDR=ON -DUAGENT_USE_SYSTEM_FASTDDS=ON -DCMAKE_INSTALL_PREFIX=/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent
+[0.653s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/px4': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/stark/stuff/Projects/LeaderFollower/SITL/PX4-Autopilot -DCMAKE_INSTALL_PREFIX=/home/stark/stuff/Projects/LeaderFollower/install/px4
+[2.041s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/microxrcedds_agent' returned '0': /usr/bin/cmake /home/stark/stuff/Projects/LeaderFollower/SITL/Micro-XRCE-DDS-Agent -DUAGENT_ISOLATED_INSTALL=OFF -DUAGENT_USE_SYSTEM_FASTCDR=ON -DUAGENT_USE_SYSTEM_FASTDDS=ON -DCMAKE_INSTALL_PREFIX=/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent
+[2.046s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/microxrcedds_agent': /usr/bin/cmake --build /home/stark/stuff/Projects/LeaderFollower/build/microxrcedds_agent -- -j16 -l16
+[6.564s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/microxrcedds_agent' returned '0': /usr/bin/cmake --build /home/stark/stuff/Projects/LeaderFollower/build/microxrcedds_agent -- -j16 -l16
+[6.600s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/microxrcedds_agent': /usr/bin/cmake --install /home/stark/stuff/Projects/LeaderFollower/build/microxrcedds_agent
+[6.688s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(microxrcedds_agent)
+[6.690s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/microxrcedds_agent' returned '0': /usr/bin/cmake --install /home/stark/stuff/Projects/LeaderFollower/build/microxrcedds_agent
+[6.696s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent' for CMake module files
+[6.698s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent' for CMake config files
+[6.698s] Level 1:colcon.colcon_core.shell:create_environment_hook('microxrcedds_agent', 'cmake_prefix_path')
+[6.699s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/hook/cmake_prefix_path.ps1'
+[6.701s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/hook/cmake_prefix_path.dsv'
+[6.702s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/hook/cmake_prefix_path.sh'
+[6.705s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/lib'
+[6.705s] Level 1:colcon.colcon_core.shell:create_environment_hook('microxrcedds_agent', 'ld_library_path_lib')
+[6.706s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/hook/ld_library_path_lib.ps1'
+[6.707s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/hook/ld_library_path_lib.dsv'
+[6.708s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/hook/ld_library_path_lib.sh'
+[6.709s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/bin'
+[6.710s] Level 1:colcon.colcon_core.shell:create_environment_hook('microxrcedds_agent', 'path')
+[6.711s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/hook/path.ps1'
+[6.712s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/hook/path.dsv'
+[6.712s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/hook/path.sh'
+[6.713s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/lib/pkgconfig/microxrcedds_agent.pc'
+[6.713s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/lib/python3.10/site-packages'
+[6.714s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/bin'
+[6.714s] Level 1:colcon.colcon_core.shell:create_environment_hook('microxrcedds_agent', 'pythonscriptspath')
+[6.715s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/hook/pythonscriptspath.ps1'
+[6.716s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/hook/pythonscriptspath.dsv'
+[6.717s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/hook/pythonscriptspath.sh'
+[6.720s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/package.ps1'
+[6.723s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/package.dsv'
+[6.725s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/package.sh'
+[6.727s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/package.bash'
+[6.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/microxrcedds_agent/package.zsh'
+[6.733s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/stark/stuff/Projects/LeaderFollower/install/microxrcedds_agent/share/colcon-core/packages/microxrcedds_agent)
+[12.086s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/px4_msgs -DCMAKE_INSTALL_PREFIX=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs
+[12.092s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/stark/stuff/Projects/LeaderFollower/build/px4_msgs -- -j16 -l16
+[23.276s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/px4' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/stark/stuff/Projects/LeaderFollower/SITL/PX4-Autopilot -DCMAKE_INSTALL_PREFIX=/home/stark/stuff/Projects/LeaderFollower/install/px4
+[23.280s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/px4': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/stark/stuff/Projects/LeaderFollower/build/px4 -- -j16 -l16
+[415.923s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/stark/stuff/Projects/LeaderFollower/build/px4_msgs -- -j16 -l16
+[415.935s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/stark/stuff/Projects/LeaderFollower/build/px4_msgs
+[419.898s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[419.899s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs' for CMake module files
+[419.902s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/stark/stuff/Projects/LeaderFollower/build/px4_msgs
+[419.903s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs' for CMake config files
+[419.906s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[419.906s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[419.908s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[419.909s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[419.910s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib'
+[419.910s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[419.911s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[419.912s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[419.913s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[419.913s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/bin'
+[419.913s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[419.914s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib/python3.10/site-packages'
+[419.914s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/bin'
+[419.915s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/package.ps1'
+[419.917s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/package.dsv'
+[419.919s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/package.sh'
+[419.920s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/package.bash'
+[419.922s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/package.zsh'
+[419.923s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[419.926s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[419.927s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs' for CMake module files
+[419.928s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs' for CMake config files
+[419.931s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[419.932s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[419.934s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[419.935s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[419.937s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib'
+[419.937s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[419.938s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[419.939s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[419.940s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[419.941s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/bin'
+[419.941s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[419.941s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib/python3.10/site-packages'
+[419.941s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/bin'
+[419.943s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/package.ps1'
+[419.944s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/package.dsv'
+[419.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/package.sh'
+[419.948s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/package.bash'
+[419.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/package.zsh'
+[419.952s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[419.954s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/drones_msgs' with build type 'ament_cmake'
+[419.954s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/drones_msgs'
+[419.955s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[419.955s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[419.962s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/px4_ros_com' with build type 'ament_cmake'
+[419.963s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/px4_ros_com'
+[419.964s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[419.964s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[419.988s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/drones_msgs': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/drones_msgs -DCMAKE_INSTALL_PREFIX=/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs
+[419.996s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com
+[423.967s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com
+[423.973s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com -- -j16 -l16
+[426.814s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com -- -j16 -l16
+[426.817s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com
+[427.009s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_ros_com)
+[427.010s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com' for CMake module files
+[427.011s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com
+[427.012s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com' for CMake config files
+[427.013s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'cmake_prefix_path')
+[427.014s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.ps1'
+[427.016s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.dsv'
+[427.017s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.sh'
+[427.019s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib'
+[427.019s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'ld_library_path_lib')
+[427.020s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.ps1'
+[427.021s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.dsv'
+[427.022s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.sh'
+[427.023s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/bin'
+[427.023s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/pkgconfig/px4_ros_com.pc'
+[427.023s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/python3.10/site-packages'
+[427.024s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/bin'
+[427.025s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/package.ps1'
+[427.026s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/package.dsv'
+[427.027s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/package.sh'
+[427.027s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/package.bash'
+[427.028s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/package.zsh'
+[427.028s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/colcon-core/packages/px4_ros_com)
+[427.029s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_ros_com)
+[427.030s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com' for CMake module files
+[427.031s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com' for CMake config files
+[427.032s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'cmake_prefix_path')
+[427.033s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.ps1'
+[427.036s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.dsv'
+[427.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.sh'
+[427.040s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib'
+[427.040s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'ld_library_path_lib')
+[427.041s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.ps1'
+[427.042s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.dsv'
+[427.043s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.sh'
+[427.044s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/bin'
+[427.044s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/pkgconfig/px4_ros_com.pc'
+[427.045s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/python3.10/site-packages'
+[427.045s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/bin'
+[427.046s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/package.ps1'
+[427.047s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/package.dsv'
+[427.048s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/package.sh'
+[427.049s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/package.bash'
+[427.051s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/package.zsh'
+[427.052s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/colcon-core/packages/px4_ros_com)
+[428.650s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/drones_msgs' returned '0': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/drones_msgs -DCMAKE_INSTALL_PREFIX=/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs
+[428.655s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/drones_msgs': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/stark/stuff/Projects/LeaderFollower/build/drones_msgs -- -j16 -l16
+[437.219s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/drones_msgs' returned '0': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/stark/stuff/Projects/LeaderFollower/build/drones_msgs -- -j16 -l16
+[437.223s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/drones_msgs': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/stark/stuff/Projects/LeaderFollower/build/drones_msgs
+[437.462s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drones_msgs)
+[437.463s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs' for CMake module files
+[437.465s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/drones_msgs' returned '0': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/stark/stuff/Projects/LeaderFollower/build/drones_msgs
+[437.466s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs' for CMake config files
+[437.467s] Level 1:colcon.colcon_core.shell:create_environment_hook('drones_msgs', 'cmake_prefix_path')
+[437.468s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/hook/cmake_prefix_path.ps1'
+[437.469s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/hook/cmake_prefix_path.dsv'
+[437.470s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/hook/cmake_prefix_path.sh'
+[437.471s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib'
+[437.471s] Level 1:colcon.colcon_core.shell:create_environment_hook('drones_msgs', 'ld_library_path_lib')
+[437.472s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/hook/ld_library_path_lib.ps1'
+[437.473s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/hook/ld_library_path_lib.dsv'
+[437.474s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/hook/ld_library_path_lib.sh'
+[437.474s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/bin'
+[437.475s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/pkgconfig/drones_msgs.pc'
+[437.475s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/python3.10/site-packages'
+[437.476s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/bin'
+[437.477s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/package.ps1'
+[437.479s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/package.dsv'
+[437.481s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/package.sh'
+[437.482s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/package.bash'
+[437.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/package.zsh'
+[437.484s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/colcon-core/packages/drones_msgs)
+[437.486s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drones_msgs)
+[437.486s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs' for CMake module files
+[437.487s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs' for CMake config files
+[437.488s] Level 1:colcon.colcon_core.shell:create_environment_hook('drones_msgs', 'cmake_prefix_path')
+[437.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/hook/cmake_prefix_path.ps1'
+[437.490s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/hook/cmake_prefix_path.dsv'
+[437.491s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/hook/cmake_prefix_path.sh'
+[437.492s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib'
+[437.492s] Level 1:colcon.colcon_core.shell:create_environment_hook('drones_msgs', 'ld_library_path_lib')
+[437.493s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/hook/ld_library_path_lib.ps1'
+[437.494s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/hook/ld_library_path_lib.dsv'
+[437.495s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/hook/ld_library_path_lib.sh'
+[437.496s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/bin'
+[437.497s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/pkgconfig/drones_msgs.pc'
+[437.497s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib/python3.10/site-packages'
+[437.497s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/bin'
+[437.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/package.ps1'
+[437.501s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/package.dsv'
+[437.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/package.sh'
+[437.503s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/package.bash'
+[437.504s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/drones_msgs/package.zsh'
+[437.505s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/share/colcon-core/packages/drones_msgs)
+[437.506s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/drone_controller' with build type 'ament_python'
+[437.507s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_controller', 'ament_prefix_path')
+[437.508s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/share/drone_controller/hook/ament_prefix_path.ps1'
+[437.510s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/share/drone_controller/hook/ament_prefix_path.dsv'
+[437.511s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/share/drone_controller/hook/ament_prefix_path.sh'
+[437.512s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[437.513s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[437.520s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/drones_intracom_py' with build type 'ament_python'
+[437.521s] Level 1:colcon.colcon_core.shell:create_environment_hook('drones_intracom_py', 'ament_prefix_path')
+[437.522s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/drones_intracom_py/hook/ament_prefix_path.ps1'
+[437.524s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/drones_intracom_py/hook/ament_prefix_path.dsv'
+[437.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/drones_intracom_py/hook/ament_prefix_path.sh'
+[437.527s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[437.527s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[438.137s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/drone_controller'
+[438.138s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[438.138s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[438.756s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/drones_intracom_py'
+[438.757s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[438.757s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[440.506s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/drone_controller': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/build/drone_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/lib/python3.10/site-packages:/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/drone_controller build --build-base /home/stark/stuff/Projects/LeaderFollower/build/drone_controller/build install --record /home/stark/stuff/Projects/LeaderFollower/build/drone_controller/install.log --single-version-externally-managed install_data
+[440.842s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/drones_intracom_py': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/build/drones_intracom_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/lib/python3.10/site-packages:/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/drones_intracom_py build --build-base /home/stark/stuff/Projects/LeaderFollower/build/drones_intracom_py/build install --record /home/stark/stuff/Projects/LeaderFollower/build/drones_intracom_py/install.log --single-version-externally-managed install_data
+[442.031s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller' for CMake module files
+[442.032s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/drone_controller' returned '0': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/build/drone_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/lib/python3.10/site-packages:/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/drone_controller build --build-base /home/stark/stuff/Projects/LeaderFollower/build/drone_controller/build install --record /home/stark/stuff/Projects/LeaderFollower/build/drone_controller/install.log --single-version-externally-managed install_data
+[442.033s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller' for CMake config files
+[442.034s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/lib'
+[442.034s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/bin'
+[442.034s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/lib/pkgconfig/drone_controller.pc'
+[442.035s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/lib/python3.10/site-packages'
+[442.035s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_controller', 'pythonpath')
+[442.036s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/share/drone_controller/hook/pythonpath.ps1'
+[442.037s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/share/drone_controller/hook/pythonpath.dsv'
+[442.038s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/share/drone_controller/hook/pythonpath.sh'
+[442.040s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/bin'
+[442.040s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drone_controller)
+[442.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/share/drone_controller/package.ps1'
+[442.042s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/share/drone_controller/package.dsv'
+[442.044s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/share/drone_controller/package.sh'
+[442.045s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/share/drone_controller/package.bash'
+[442.046s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/share/drone_controller/package.zsh'
+[442.047s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/stark/stuff/Projects/LeaderFollower/install/drone_controller/share/colcon-core/packages/drone_controller)
+[442.289s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py' for CMake module files
+[442.291s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/drones_intracom_py' returned '0': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/lib:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/build/drones_intracom_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/lib/python3.10/site-packages:/home/stark/stuff/Projects/LeaderFollower/install/drones_msgs/local/lib/python3.10/dist-packages:/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/drones_intracom_py build --build-base /home/stark/stuff/Projects/LeaderFollower/build/drones_intracom_py/build install --record /home/stark/stuff/Projects/LeaderFollower/build/drones_intracom_py/install.log --single-version-externally-managed install_data
+[442.292s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py' for CMake config files
+[442.293s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/lib'
+[442.294s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/bin'
+[442.294s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/lib/pkgconfig/drones_intracom_py.pc'
+[442.295s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/lib/python3.10/site-packages'
+[442.295s] Level 1:colcon.colcon_core.shell:create_environment_hook('drones_intracom_py', 'pythonpath')
+[442.296s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/drones_intracom_py/hook/pythonpath.ps1'
+[442.297s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/drones_intracom_py/hook/pythonpath.dsv'
+[442.298s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/drones_intracom_py/hook/pythonpath.sh'
+[442.299s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/bin'
+[442.300s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drones_intracom_py)
+[442.300s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/drones_intracom_py/package.ps1'
+[442.301s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/drones_intracom_py/package.dsv'
+[442.302s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/drones_intracom_py/package.sh'
+[442.303s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/drones_intracom_py/package.bash'
+[442.304s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/drones_intracom_py/package.zsh'
+[442.305s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/stark/stuff/Projects/LeaderFollower/install/drones_intracom_py/share/colcon-core/packages/drones_intracom_py)
+[613.121s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/px4' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/stark/stuff/Projects/LeaderFollower/build/px4 -- -j16 -l16
+[613.128s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/px4': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/stark/stuff/Projects/LeaderFollower/build/px4
+[616.846s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4)
+[616.847s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4' for CMake module files
+[616.848s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/px4' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/stark/stuff/Projects/LeaderFollower/build/px4
+[616.849s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4' for CMake config files
+[616.852s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4', 'cmake_prefix_path')
+[616.853s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/hook/cmake_prefix_path.ps1'
+[616.855s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/hook/cmake_prefix_path.dsv'
+[616.856s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/hook/cmake_prefix_path.sh'
+[616.858s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4/lib'
+[616.859s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4', 'ld_library_path_lib')
+[616.860s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/hook/ld_library_path_lib.ps1'
+[616.861s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/hook/ld_library_path_lib.dsv'
+[616.862s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/hook/ld_library_path_lib.sh'
+[616.863s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4/bin'
+[616.863s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4/lib/pkgconfig/px4.pc'
+[616.864s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4/lib/python3.10/site-packages'
+[616.864s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4/bin'
+[616.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/package.ps1'
+[616.866s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/package.dsv'
+[616.867s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/package.sh'
+[616.868s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/package.bash'
+[616.869s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/package.zsh'
+[616.870s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/stark/stuff/Projects/LeaderFollower/install/px4/share/colcon-core/packages/px4)
+[616.873s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4)
+[616.874s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4' for CMake module files
+[616.875s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4' for CMake config files
+[616.879s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4', 'cmake_prefix_path')
+[616.880s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/hook/cmake_prefix_path.ps1'
+[616.881s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/hook/cmake_prefix_path.dsv'
+[616.883s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/hook/cmake_prefix_path.sh'
+[616.884s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4/lib'
+[616.885s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4', 'ld_library_path_lib')
+[616.886s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/hook/ld_library_path_lib.ps1'
+[616.887s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/hook/ld_library_path_lib.dsv'
+[616.887s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/hook/ld_library_path_lib.sh'
+[616.889s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4/bin'
+[616.889s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4/lib/pkgconfig/px4.pc'
+[616.890s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4/lib/python3.10/site-packages'
+[616.890s] Level 1:colcon.colcon_core.environment:checking '/home/stark/stuff/Projects/LeaderFollower/install/px4/bin'
+[616.891s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/package.ps1'
+[616.893s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/package.dsv'
+[616.895s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/package.sh'
+[616.896s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/package.bash'
+[616.898s] INFO:colcon.colcon_core.shell:Creating package script '/home/stark/stuff/Projects/LeaderFollower/install/px4/share/px4/package.zsh'
+[616.899s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/stark/stuff/Projects/LeaderFollower/install/px4/share/colcon-core/packages/px4)
+[616.900s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[616.901s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[616.902s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[616.902s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[616.969s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[616.969s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[616.969s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[617.004s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[617.005s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/stark/stuff/Projects/LeaderFollower/install/local_setup.ps1'
+[617.008s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/stark/stuff/Projects/LeaderFollower/install/_local_setup_util_ps1.py'
+[617.011s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/stark/stuff/Projects/LeaderFollower/install/setup.ps1'
+[617.013s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/stark/stuff/Projects/LeaderFollower/install/local_setup.sh'
+[617.014s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/stark/stuff/Projects/LeaderFollower/install/_local_setup_util_sh.py'
+[617.015s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/stark/stuff/Projects/LeaderFollower/install/setup.sh'
+[617.017s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/stark/stuff/Projects/LeaderFollower/install/local_setup.bash'
+[617.018s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/stark/stuff/Projects/LeaderFollower/install/setup.bash'
+[617.020s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/stark/stuff/Projects/LeaderFollower/install/local_setup.zsh'
+[617.021s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/stark/stuff/Projects/LeaderFollower/install/setup.zsh'

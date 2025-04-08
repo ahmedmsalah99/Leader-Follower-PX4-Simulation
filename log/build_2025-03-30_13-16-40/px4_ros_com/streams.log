@@ -1,0 +1,145 @@
+[0.033s] Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com
+[0.239s] -- The C compiler identification is GNU 11.4.0
+[0.419s] -- The CXX compiler identification is GNU 11.4.0
+[0.443s] -- Detecting C compiler ABI info
+[0.635s] -- Detecting C compiler ABI info - done
+[0.650s] -- Check for working C compiler: /usr/lib/ccache/cc - skipped
+[0.651s] -- Detecting C compile features
+[0.652s] -- Detecting C compile features - done
+[0.659s] -- Detecting CXX compiler ABI info
+[0.870s] -- Detecting CXX compiler ABI info - done
+[0.884s] -- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+[0.885s] -- Detecting CXX compile features
+[0.886s] -- Detecting CXX compile features - done
+[0.895s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.049s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.345s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[2.439s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.453s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.475s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.510s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.555s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.597s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.627s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.633s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[2.719s] -- Found px4_msgs: 2.0.1 (/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/share/px4_msgs/cmake)
+[2.747s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[2.849s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.858s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[2.919s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[2.945s] -- Looking for pthread.h
+[3.125s] -- Looking for pthread.h - found
+[3.125s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.314s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[3.316s] -- Found Threads: TRUE  
+[3.419s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[3.473s] -- Found rclpy: 3.3.15 (/opt/ros/humble/share/rclpy/cmake)
+[3.497s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.818s] -- Added test 'copyright' to check source files copyright and LICENSE
+[3.832s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.833s] -- Configured cppcheck include dirs: /home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/px4_ros_com/include;$<BUILD_INTERFACE:/home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/px4_ros_com/include/px4_ros_com>
+[3.833s] -- Configured cppcheck exclude dirs and/or files: 
+[3.847s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.847s] -- Configured cpplint exclude dirs and/or files: 
+[3.850s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.854s] -- Added test 'lint_cmake' to check CMake code style
+[3.857s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[3.870s] -- Added test 'uncrustify' to check C / C++ code style
+[3.870s] -- Configured uncrustify additional arguments: 
+[3.873s] -- Added test 'xmllint' to check XML markup files
+[3.878s] -- Configuring done
+[3.942s] -- Generating done
+[3.968s] -- Build files have been written to: /home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com
+[4.004s] Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/stark/stuff/Projects/LeaderFollower/ros2_ws/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com
+[4.010s] Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com -- -j16 -l16
+[4.200s] [  8%] [32mBuilding CXX object CMakeFiles/vehicle_gps_position_listener.dir/src/examples/listeners/vehicle_gps_position_listener.cpp.o[0m
+[4.210s] [ 16%] [32mBuilding CXX object CMakeFiles/frame_transforms.dir/src/lib/frame_transforms.cpp.o[0m
+[4.213s] [ 25%] [32mBuilding CXX object CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o[0m
+[4.215s] [ 33%] [32mBuilding CXX object CMakeFiles/sensor_combined_listener.dir/src/examples/listeners/sensor_combined_listener.cpp.o[0m
+[4.216s] [ 41%] [32mBuilding CXX object CMakeFiles/offboard_control_srv.dir/src/examples/offboard/offboard_control_srv.cpp.o[0m
+[4.225s] [ 50%] [32mBuilding CXX object CMakeFiles/debug_vect_advertiser.dir/src/examples/advertisers/debug_vect_advertiser.cpp.o[0m
+[4.246s] [ 50%] Built target ament_cmake_python_copy_px4_ros_com
+[4.375s] [ 58%] [32m[1mLinking CXX executable debug_vect_advertiser[0m
+[4.379s] [ 66%] [32m[1mLinking CXX executable offboard_control[0m
+[4.389s] [ 75%] [32m[1mLinking CXX executable offboard_control_srv[0m
+[4.399s] [ 83%] [32m[1mLinking CXX executable vehicle_gps_position_listener[0m
+[4.406s] [ 91%] [32m[1mLinking CXX executable sensor_combined_listener[0m
+[4.430s] [100%] [32m[1mLinking CXX shared library libframe_transforms.so[0m
+[5.230s] running egg_info
+[5.233s] creating px4_ros_com.egg-info
+[5.794s] writing px4_ros_com.egg-info/PKG-INFO
+[5.796s] writing dependency_links to px4_ros_com.egg-info/dependency_links.txt
+[5.799s] writing top-level names to px4_ros_com.egg-info/top_level.txt
+[5.801s] writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[5.965s] [100%] Built target debug_vect_advertiser
+[6.035s] reading manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[6.038s] writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[6.174s] [100%] Built target offboard_control_srv
+[6.193s] [100%] Built target offboard_control
+[6.251s] [100%] Built target ament_cmake_python_build_px4_ros_com_egg
+[6.355s] [100%] Built target frame_transforms
+[6.769s] [100%] Built target vehicle_gps_position_listener
+[6.816s] [100%] Built target sensor_combined_listener
+[6.850s] Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com -- -j16 -l16
+[6.853s] Invoking command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com
+[6.876s] -- Install configuration: ""
+[6.876s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener
+[6.885s] -- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener" to ""
+[6.886s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener
+[6.894s] -- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener" to ""
+[6.894s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser
+[6.897s] -- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser" to ""
+[6.897s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/px4_ros_com/offboard_control
+[6.902s] -- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/px4_ros_com/offboard_control" to ""
+[6.902s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/px4_ros_com/offboard_control_srv
+[6.908s] -- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/px4_ros_com/offboard_control_srv" to ""
+[6.909s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/environment/library_path.sh
+[6.909s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/environment/library_path.dsv
+[6.909s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/include/px4_ros_com
+[6.909s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/include/px4_ros_com/frame_transforms.h
+[6.910s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/libframe_transforms.so
+[6.921s] -- Set runtime path of "/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/libframe_transforms.so" to ""
+[6.921s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com//launch
+[6.921s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com//launch/offboard_control_launch.yaml
+[6.923s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com//launch/sensor_combined_listener.launch.py
+[6.924s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com//test
+[6.924s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com//test/__init__.py
+[6.924s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com//test/pipeline_io_test.py
+[6.924s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com//test/test_input.py
+[6.924s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com//test/test_output.py
+[6.925s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.sh
+[6.925s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.dsv
+[6.925s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info
+[6.926s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/dependency_links.txt
+[6.926s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/top_level.txt
+[6.926s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/PKG-INFO
+[6.926s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/SOURCES.txt
+[6.927s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com
+[6.927s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/__init__.py
+[6.927s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/module_to_import.py
+[7.011s] Listing '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com'...
+[7.011s] Compiling '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/__init__.py'...
+[7.011s] Compiling '/home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/module_to_import.py'...
+[7.033s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/lib/px4_ros_com/offboard_control.py
+[7.034s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/ament_index/resource_index/package_run_dependencies/px4_ros_com
+[7.034s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/ament_index/resource_index/parent_prefix_path/px4_ros_com
+[7.035s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.sh
+[7.035s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.dsv
+[7.036s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/environment/path.sh
+[7.036s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/environment/path.dsv
+[7.037s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/local_setup.bash
+[7.037s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/local_setup.sh
+[7.037s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/local_setup.zsh
+[7.037s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/local_setup.dsv
+[7.037s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/package.dsv
+[7.038s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/ament_index/resource_index/packages/px4_ros_com
+[7.038s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport.cmake
+[7.039s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport-noconfig.cmake
+[7.039s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.040s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_targets-extras.cmake
+[7.040s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_include_directories-extras.cmake
+[7.040s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_libraries-extras.cmake
+[7.041s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig.cmake
+[7.041s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig-version.cmake
+[7.041s] -- Installing: /home/stark/stuff/Projects/LeaderFollower/install/px4_ros_com/share/px4_ros_com/package.xml
+[7.048s] Invoked command in '/home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/tmp/.mount_CursorgjFFeI/usr/lib/:/tmp/.mount_CursorgjFFeI/usr/lib32/:/tmp/.mount_CursorgjFFeI/usr/lib64/:/tmp/.mount_CursorgjFFeI/lib/:/tmp/.mount_CursorgjFFeI/lib/i386-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/x86_64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib/aarch64-linux-gnu/:/tmp/.mount_CursorgjFFeI/lib32/:/tmp/.mount_CursorgjFFeI/lib64/ PYTHONPATH=/home/stark/stuff/Projects/LeaderFollower/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/stark/stuff/Projects/LeaderFollower/build/px4_ros_com
