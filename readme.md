@@ -25,11 +25,11 @@ Below is a demonstration of the leader-follower swarm behavior in action. The le
 
 ```
 Leader-Follower-PX4-Simulation/
+├── command_drone.sh
 ├── automation_scripts/
 │   ├── init.sh
 │   ├── launch.sh
 │   ├── start_system.sh
-│   ├── command_drone.sh
 ├── test_mission.py
 └── SITL/
     └── QGroundControl.AppImage (must be placed manually)
