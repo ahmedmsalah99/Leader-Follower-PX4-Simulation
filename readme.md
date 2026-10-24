@@ -38,7 +38,17 @@ Leader-Follower-PX4-Simulation/
 ## 🚀 Getting Started
 
 > **Prerequisite:** Make sure `QGroundControl.AppImage` is placed inside the `SITL/` folder.
-> cd to the automation_scripts folder
+> To install the AppImage file refer to: https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html
+
+### Cloning and building
+
+```bash
+git clone --recursive https://github.com/ahmedmsalah99/Leader-Follower-PX4-Simulation.git
+cd Leader-Follower-PX4-Simulation/ros2_ws
+colcon build
+```
+
+
 
 ### 1. Initialize GCS and Micro XRCE-DDS
 
@@ -53,6 +63,8 @@ This sets up QGroundControl and MAVLink to ROS2 bridge:
 This starts a clean simulation with the desired number of drones:
 
 ```bash
+cd SITL/automation_scripts
+export PX4_PATH=<your-px4-folder-path>
 ./launch.sh -n <drones_num> [-h]
 ```
 
@@ -67,6 +79,7 @@ Starts ROS2 nodes that:
 - Handle leader election
 
 ```bash
+cd SITL/automation_scripts
 ./start_system.sh -n <drones_num>
 ```
 
