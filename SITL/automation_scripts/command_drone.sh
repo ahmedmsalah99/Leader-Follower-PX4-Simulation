@@ -29,7 +29,7 @@ send_command_to_all() {
 
 # Upload a mission plan to the current leader and start it
 run_leader_mission() {
-    local plan=$1
+    local plan="${1/#\~/$HOME}"  # read doesn't expand ~
     local leader_id
     leader_id=$(timeout 5 ros2 topic echo --once --field leader_id /global/swarm_status 2>/dev/null | head -n 1)
     if [ -z "$leader_id" ] || [ "$leader_id" -eq 0 ]; then
@@ -44,18 +44,30 @@ run_leader_mission() {
     fi
 }
 
+print_help() {
+    echo ""
+    echo "Commands (leave out the drone number to command ALL $NUM_DRONES drones):"
+    echo "  takeoff [N]          arm and take off"
+    echo "  land [N]             land"
+    echo "  return [N]           return to launch"
+    echo "  mission [plan_file]  fly a QGroundControl .plan with the current leader"
+    echo "                       (default: SITL/missions/simple_mission.plan)"
+    echo "  help                 show this help"
+    echo "  exit                 quit"
+    echo "Examples:"
+    echo "  takeoff              all drones take off"
+    echo "  takeoff 2            only drone 2 takes off"
+    echo "  land                 all drones land"
+    echo "  mission              the leader flies simple_mission.plan, the others follow"
+}
+
+print_help
+
 # Main command loop
 while true; do
-    echo -e "\nEnter command (takeoff/land/return) [drone_number], mission [plan_file], or exit"
-    echo "Examples:"
-    echo "  takeoff     - arms all drones and takes off"
-    echo "  land 2      - lands drone 2"
-    echo "  return 1    - returns drone 1 to launch"
-    echo "  mission     - flies SITL/missions/simple_mission.plan with the leader"
-    echo "  mission my.plan - flies my.plan with the leader"
     echo -n "> "
 
-    read command arg
+    read command arg || exit 0
 
     case $command in
         "exit")
@@ -78,8 +90,14 @@ while true; do
         "mission")
             run_leader_mission "$arg"
             ;;
+        "help")
+            print_help
+            ;;
+        "")
+            ;;
         *)
-            echo "Invalid command. Use takeoff, land, return, mission, or exit"
+            echo "Invalid command '$command'"
+            print_help
             ;;
     esac
 done
