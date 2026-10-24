@@ -30,6 +30,7 @@ Leader-Follower-PX4-Simulation/
 │   ├── init.sh
 │   ├── launch.sh
 │   ├── start_system.sh
+│   ├── hover.sh
 ├── test_mission.py
 └── SITL/
     └── QGroundControl.AppImage (must be placed manually)
@@ -85,7 +86,19 @@ cd SITL/automation_scripts
 
 > Drones are assigned priorities based on their number (modifiable in the script).
 
-### 4. Command the Swarm
+### 4. Hover the Drones
+
+Arms every drone, takes off and holds at the given altitude. It retries until PX4 confirms each step
+and exits once all drones hover (or after the timeout):
+
+```bash
+./hover.sh -n <drones_num> [-a <altitude_m>] [-t <timeout_s>]
+```
+
+- `-a`: hover altitude above home in meters (default: 2.5)
+- `-t`: give up after this many seconds (default: 60)
+
+### 5. Command the Swarm
 
 Once drones are hovering and the leader is elected, you can send commands:
 
@@ -99,8 +112,9 @@ Once drones are hovering and the leader is elected, you can send commands:
 2. Launch the simulation with `launch.sh -n 3` (or any number)
 3. Start the ROS2 control system with `start_system.sh -n 3`
 4. Wait for system to initialize and elect the leader
-5. Upload a mission to the leader drone using QGroundControl
-6. Start the mission – follower drones will follow the leader in real time
+5. Make the drones hover with `hover.sh -n 3`
+6. Upload a mission to the leader drone using QGroundControl
+7. Start the mission – follower drones will follow the leader in real time
 
 ## 🧪 Additinal Script
 
