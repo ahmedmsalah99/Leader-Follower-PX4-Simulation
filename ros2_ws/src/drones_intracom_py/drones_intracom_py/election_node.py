@@ -54,7 +54,7 @@ class ElectionNode(Node):
         # Subscribers
         self.position_sub = self.create_subscription(
             VehicleLocalPosition,
-            f'{self.namespace}/fmu/out/vehicle_local_position',
+            f'{self.namespace}/fmu/out/vehicle_local_position_v1',
             self._local_position_callback,
             qos_profile
         )

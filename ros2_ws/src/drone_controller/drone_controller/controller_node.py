@@ -73,7 +73,7 @@ class DroneController(Node):
             self._status_callback, qos_profile)
             
         self.local_position_sub = self.create_subscription(
-            VehicleLocalPosition, f'{self.namespace}/fmu/out/vehicle_local_position',
+            VehicleLocalPosition, f'{self.namespace}/fmu/out/vehicle_local_position_v1',
             self._local_position_callback, qos_profile)
             
         self.battery_status_sub = self.create_subscription(
