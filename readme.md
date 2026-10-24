@@ -45,21 +45,18 @@ get no data from PX4 and keep printing `No status updates received yet`.
 
 ## 📦 Installation
 
-The commands below assume this repo is cloned into your home folder and PX4 is installed at `~/PX4-Autopilot`.
-
-**1. Clone this repo**
+**1. Clone this repo.** All `cd` paths below are relative to its root folder.
 
 ```bash
-cd ~
 git clone --recursive https://github.com/ahmedmsalah99/Leader-Follower-PX4-Simulation.git
+cd Leader-Follower-PX4-Simulation
 ```
 
-**2. Install PX4 v1.17.0**
+**2. Install PX4 v1.17.0** in any folder outside this repo:
 
 ```bash
-cd ~
 git clone -b v1.17.0 --recursive https://github.com/PX4/PX4-Autopilot.git
-cd ~/PX4-Autopilot
+cd PX4-Autopilot
 bash ./Tools/setup/ubuntu.sh   # installs dependencies and Gazebo, reboot afterwards
 make px4_sitl
 ```
@@ -67,7 +64,7 @@ make px4_sitl
 Already have PX4? Switch it to the release and rebuild:
 
 ```bash
-cd ~/PX4-Autopilot
+cd PX4-Autopilot
 git fetch --tags && git checkout v1.17.0
 git submodule update --init --recursive
 make distclean && make px4_sitl
@@ -76,7 +73,7 @@ make distclean && make px4_sitl
 **3. Build the Micro XRCE-DDS Agent**
 
 ```bash
-cd ~/Leader-Follower-PX4-Simulation/SITL/Micro-XRCE-DDS-Agent
+cd SITL/Micro-XRCE-DDS-Agent
 mkdir build && cd build
 cmake .. && make
 sudo make install && sudo ldconfig /usr/local/lib/
@@ -85,7 +82,7 @@ sudo make install && sudo ldconfig /usr/local/lib/
 **4. Build the ROS 2 workspace** (with ROS 2 sourced; `pymavlink` comes with PX4's `ubuntu.sh`)
 
 ```bash
-cd ~/Leader-Follower-PX4-Simulation/ros2_ws
+cd ros2_ws
 colcon build
 ```
 
@@ -93,34 +90,34 @@ colcon build
 
 ## 🚀 Quick start
 
-Open **4 terminals** and paste one block into each, in order.
+Open **4 terminals** in the repo root and paste one block into each, in order.
 
 **Terminal 1: QGroundControl + PX4 ↔ ROS 2 bridge**
 
 ```bash
-cd ~/Leader-Follower-PX4-Simulation/SITL/automation_scripts
+cd SITL/automation_scripts
 ./init.sh
 ```
 
 **Terminal 2: Gazebo with 3 drones on the green `lawn` world**
 
 ```bash
-cd ~/Leader-Follower-PX4-Simulation/SITL/automation_scripts
-export PX4_PATH=~/PX4-Autopilot
+cd SITL/automation_scripts
+export PX4_PATH=/path/to/PX4-Autopilot   # your PX4 folder
 ./launch.sh -n 3 -w lawn
 ```
 
 **Terminal 3: ROS 2 nodes (election, controllers, swarm manager)**
 
 ```bash
-cd ~/Leader-Follower-PX4-Simulation/SITL/automation_scripts
+cd SITL/automation_scripts
 ./start_system.sh -n 3
 ```
 
 **Terminal 4: command the swarm** (once the leader is elected)
 
 ```bash
-cd ~/Leader-Follower-PX4-Simulation/SITL/automation_scripts
+cd SITL/automation_scripts
 ./command_drone.sh 3
 ```
 
@@ -170,7 +167,7 @@ Command a single drone, or fly your own plan (Terminal 4):
 ```text
 > takeoff 2
 > return 2
-> mission ~/my_route.plan
+> mission /path/to/my_route.plan
 ```
 
 ## 📝 Notes
