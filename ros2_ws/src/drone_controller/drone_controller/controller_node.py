@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-from time import sleep
+import math
 import rclpy
 from rclpy.node import Node
-from px4_msgs.msg import VehicleStatus, VehicleCommand, VehicleLocalPosition, BatteryStatus, TrajectorySetpoint, OffboardControlMode
+from px4_msgs.msg import VehicleStatus, VehicleCommand, VehicleLocalPosition, BatteryStatus, TrajectorySetpoint, OffboardControlMode, HomePosition
 from std_msgs.msg import Bool
 from rclpy.qos import QoSProfile, QoSReliabilityPolicy, QoSHistoryPolicy, QoSDurabilityPolicy
 from drones_msgs.msg import Leaderpos
@@ -29,7 +29,9 @@ class DroneController(Node):
         self.MIN_BATTERY_LEVEL = 0.2  # percentage
         self.POSITION_THRESHOLD = 1.0  # meters
         self.VELOCITY_THRESHOLD = 0.1  # m/s
-        self.TAKEOFF_ALT = 1.5
+        self.TAKEOFF_ALT = 1.5  # meters above home
+        self.TAKEOFF_TIMEOUT = 30.0  # seconds
+        self.COMMAND_RETRY_PERIOD = 1.0  # seconds
         self.FOLLOWER_MARGIN = 0.5
 
         # Initialize state variables
@@ -39,6 +41,9 @@ class DroneController(Node):
         self.current_position = None
         self.leader_position = None
         self.battery_status = None
+        self.home_position = None
+        self.takeoff_requested_time = None
+        self.last_takeoff_attempt_time = None
         self.system_id = None
         self.component_id = None
         self.leader_id = None
@@ -77,26 +82,26 @@ class DroneController(Node):
             self._local_position_callback, qos_profile)
             
         self.battery_status_sub = self.create_subscription(
-            BatteryStatus, f'{self.namespace}/fmu/out/battery_status',
+            BatteryStatus, f'{self.namespace}/fmu/out/battery_status_v1',
             self._battery_status_callback, qos_profile)
+
+        self.home_position_sub = self.create_subscription(
+            HomePosition, f'{self.namespace}/fmu/out/home_position_v1',
+            self._home_position_callback, qos_profile)
 
         # Command subscribers with drone number in topic name
         self.leader_pose_sub = self.create_subscription(
             Leaderpos, f'/global/leader_pose', 
             self._leader_pose_callback, 10)
         
-        self.arm_command_sub = self.create_subscription(
-            Bool, f'drone_{self.drone_number}/command/arm',
-            self._arm_command_callback, 10)
-        
-        self.launch_command_sub = self.create_subscription(
-            Bool, f'drone_{self.drone_number}/command/launch',
-            self._launch_command_callback, 10)
-    
-        self.full_launch_command_sub = self.create_subscription(
-            Bool, f'drone_{self.drone_number}/command/full_launch',
-            self._full_launch_command_callback, 10)
-        
+        self.takeoff_command_sub = self.create_subscription(
+            Bool, f'drone_{self.drone_number}/command/takeoff',
+            self._takeoff_command_callback, 10)
+
+        self.land_command_sub = self.create_subscription(
+            Bool, f'drone_{self.drone_number}/command/land',
+            self._land_command_callback, 10)
+
         self.return_command_sub = self.create_subscription(
             Bool, f'drone_{self.drone_number}/command/return',
             self._return_command_callback, 10)
@@ -140,6 +145,8 @@ class DroneController(Node):
 
         if self.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
             self.publish_offboard_control_mode()
+
+        self._update_takeoff()
 
         # State machine updates with error checking
         try: 
@@ -233,6 +240,10 @@ class DroneController(Node):
     def _battery_status_callback(self, msg):
         """Callback for battery status updates"""
         self.battery_status = msg
+
+    def _home_position_callback(self, msg):
+        """Callback for home position updates"""
+        self.home_position = msg
     
     def _leader_pose_callback(self, msg):
         """Callback for leader pose updates"""
@@ -242,57 +253,69 @@ class DroneController(Node):
         self.leader_id = msg.system_id
 
     @check_status
-    def _arm_command_callback(self, msg):
-        """Handle arm/disarm commands"""
-        command_type = "arm" if msg.data else "disarm"
-        self.get_logger().info(f'Received {command_type} command')
-        
-        # Safety check for arming
-        if msg.data and not self._pre_arm_check():
-            self.get_logger().error('Pre-arm check failed')
-            return
-            
-        self.publish_vehicle_command(
-            VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM,
-            param1=1.0 if msg.data else 0.0)
-
-    @check_status
-    def _launch_command_callback(self, msg):
-        if msg.data and self.arming_state == VehicleStatus.ARMING_STATE_ARMED:
-            self.get_logger().info('Received launch command')
-            self.publish_vehicle_command(
-                VehicleCommand.VEHICLE_CMD_NAV_TAKEOFF,
-                param7=self.TAKEOFF_ALT
-            )
-
-    @check_status
-    def _full_launch_command_callback(self, msg):
-        """Handle launch commands"""
+    def _takeoff_command_callback(self, msg):
+        """Handle takeoff commands: arm and take off, see _update_takeoff"""
         if not msg.data:
-            self.get_logger().error('No valid data received')
-            return 
+            return
+        self.get_logger().info('Received takeoff command')
+        self.takeoff_requested_time = self.get_clock().now().nanoseconds / 1e9
+        self.last_takeoff_attempt_time = None
 
-        self.get_logger().info('Received full launch command')
+    def _update_takeoff(self):
+        """Arm, then take off; each step is retried until PX4 confirms it"""
+        if self.takeoff_requested_time is None:
+            return
 
-        self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM,
-            param1=1.0 )
-        sleep(2)
-        self.publish_vehicle_command(
-            VehicleCommand.VEHICLE_CMD_NAV_TAKEOFF,
-            param7=self.TAKEOFF_ALT
-        )
-        sleep(2)
-        self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM,
-            param1=0.0 )
-        sleep(2)
-        self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM,
-            param1=1.0 )
+        if self.nav_state == VehicleStatus.NAVIGATION_STATE_AUTO_TAKEOFF:
+            self.get_logger().info('Taking off')
+            self.takeoff_requested_time = None
+            return
+
+        armed = self.arming_state == VehicleStatus.ARMING_STATE_ARMED
+        if armed and self.current_position is not None and -self.current_position.z > self.POSITION_THRESHOLD:
+            self.get_logger().info('Already in the air, ignoring takeoff')
+            self.takeoff_requested_time = None
+            return
+
+        now = self.get_clock().now().nanoseconds / 1e9
+        if now - self.takeoff_requested_time > self.TAKEOFF_TIMEOUT:
+            self.get_logger().error(f'Takeoff failed: not airborne after {self.TAKEOFF_TIMEOUT:.0f}s')
+            self.takeoff_requested_time = None
+            return
+
+        if self.last_takeoff_attempt_time is not None and now - self.last_takeoff_attempt_time < self.COMMAND_RETRY_PERIOD:
+            return
+        self.last_takeoff_attempt_time = now
+
+        if not armed:
+            if self._pre_arm_check():
+                self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM, param1=1.0)
+        else:
+            # NAV_TAKEOFF altitude is AMSL; anything below the current altitude makes PX4 "take off" in place
+            self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_NAV_TAKEOFF,
+                                         param5=math.nan, param6=math.nan,
+                                         param7=self._takeoff_altitude_amsl())
+
+    def _takeoff_altitude_amsl(self):
+        """TAKEOFF_ALT above home, or NaN to let PX4 use MIS_TAKEOFF_ALT if home is unknown"""
+        if self.home_position is None or not self.home_position.valid_alt:
+            return math.nan
+        return self.home_position.alt + self.TAKEOFF_ALT
+
+    @check_status
+    def _land_command_callback(self, msg):
+        """Handle land commands"""
+        if msg.data:
+            self.get_logger().info('Received land command')
+            self.takeoff_requested_time = None
+            self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_NAV_LAND)
 
     @check_status
     def _return_command_callback(self, msg):
         """Handle return commands"""
         if msg.data:
             self.get_logger().info('Received return command')
+            self.takeoff_requested_time = None
             self.publish_vehicle_command(
                 VehicleCommand.VEHICLE_CMD_NAV_RETURN_TO_LAUNCH,
             )

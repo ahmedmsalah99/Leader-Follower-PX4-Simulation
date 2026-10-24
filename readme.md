@@ -25,14 +25,15 @@ Below is a demonstration of the leader-follower swarm behavior in action. The le
 
 ```
 Leader-Follower-PX4-Simulation/
-├── command_drone.sh
-├── automation_scripts/
-│   ├── init.sh
-│   ├── launch.sh
-│   ├── start_system.sh
-│   ├── hover.sh
-├── test_mission.py
 └── SITL/
+    ├── automation_scripts/
+    │   ├── init.sh
+    │   ├── launch.sh
+    │   ├── start_system.sh
+    │   ├── command_drone.sh
+    │   └── mission_upload.py
+    ├── missions/
+    │   └── simple_mission.plan
     └── QGroundControl.AppImage (must be placed manually)
 ```
 
@@ -86,25 +87,26 @@ cd SITL/automation_scripts
 
 > Drones are assigned priorities based on their number (modifiable in the script).
 
-### 4. Hover the Drones
+### 4. Command the Swarm
 
-Arms every drone, takes off and holds at the given altitude. It retries until PX4 confirms each step
-and exits once all drones hover (or after the timeout):
-
-```bash
-./hover.sh -n <drones_num> [-a <altitude_m>] [-t <timeout_s>]
-```
-
-- `-a`: hover altitude above home in meters (default: 2.5)
-- `-t`: give up after this many seconds (default: 60)
-
-### 5. Command the Swarm
-
-Once drones are hovering and the leader is elected, you can send commands:
+Once the leader is elected, control the drones interactively:
 
 ```bash
-./command_drone.sh
+cd SITL/automation_scripts
+./command_drone.sh <drones_num>
 ```
+
+| Command | Effect |
+|---|---|
+| `takeoff [N]` | Arm and take off (1.5 m above home), retrying until PX4 confirms |
+| `land [N]` | Land |
+| `return [N]` | Return to launch |
+| `mission [plan_file]` | Upload a QGroundControl `.plan` (default `SITL/missions/simple_mission.plan`) to the current leader and start it |
+| `exit` | Quit |
+
+Without a drone number, `takeoff`, `land` and `return` go to all drones. Once airborne, the followers
+switch to offboard mode and follow the leader, so `mission` moves the whole swarm. Only simple waypoint
+items are supported in `.plan` files (no survey/complex items).
 
 ## 📋 Typical Usage Flow
 
@@ -112,13 +114,8 @@ Once drones are hovering and the leader is elected, you can send commands:
 2. Launch the simulation with `launch.sh -n 3` (or any number)
 3. Start the ROS2 control system with `start_system.sh -n 3`
 4. Wait for system to initialize and elect the leader
-5. Make the drones hover with `hover.sh -n 3`
-6. Upload a mission to the leader drone using QGroundControl
-7. Start the mission – follower drones will follow the leader in real time
-
-## 🧪 Additinal Script
-
-You can also use `test_mission.py` to download a mission from drone 1 and upload it to 2 
+5. Run `command_drone.sh 3`, then `takeoff`
+6. Run `mission` – the leader flies the plan and the followers follow it in real time
 
 
 ## 🛠 Notes
