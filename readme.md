@@ -1,138 +1,143 @@
-
----
-
 # Leader-Follower-PX4-Simulation
 
-This project simulates a simple leader-follower drone swarm using **PX4**, **ROS2**, **pymavlink**, and **Gazebo SITL**. It implements a dynamic leader election system using the **bully algorithm**, enabling drones to elect a new leader when the current one times out or at the simulation start.
-
-## 🧠 Overview
-
-- **Swarm simulation** in PX4/Gazebo SITL
-- **Leader election** using the bully algorithm
-- **ROS2 nodes** handle swarm monitoring and control
-- **MAVLink to ROS2 bridging** via Micro XRCE-DDS
-- **Mission upload and follow behavior**
-
-## 📊 Example Results
-
-Below is a demonstration of the leader-follower swarm behavior in action. The leader (elected automatically) moves along a mission path, and the follower drones track and follow its movements in offboard mode.
+A leader-follower drone swarm in **PX4 SITL + Gazebo**, controlled from **ROS 2**. Drones elect a leader with the **bully algorithm** (re-elected if the leader times out); the followers track the leader in offboard mode while it flies a mission.
 
 <p align="center">
   <img src="resources/leader_follower2.gif" alt="Leader-Follower Simulation" width="600"/>
 </p>
 
-## 🧰 Project Structure
+## Version compatibility
 
-```
-Leader-Follower-PX4-Simulation/
-└── SITL/
-    ├── automation_scripts/
-    │   ├── init.sh
-    │   ├── launch.sh
-    │   ├── start_system.sh
-    │   ├── command_drone.sh
-    │   └── mission_upload.py
-    ├── missions/
-    │   └── simple_mission.plan
-    └── QGroundControl.AppImage (must be placed manually)
-```
+| Component | Version |
+|---|---|
+| PX4-Autopilot | **v1.17.x** (tested with v1.17.0) |
+| `px4_msgs` (submodule `ros2_ws/src/px4_msgs`) | branch **release/1.17** |
+| Gazebo | Harmonic |
 
-## 🚀 Getting Started
+`px4_msgs` must come from the same PX4 release as your PX4 build. If they don't match, the ROS 2 nodes
+get no data from PX4 and keep printing `No status updates received yet`.
 
-> **Prerequisite:** Make sure `QGroundControl.AppImage` is placed inside the `SITL/` folder.
-> To install the AppImage file refer to: https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html
+## Installation
 
-### Cloning and building
+**1. Clone this repo** and fetch only the submodules it needs:
 
 ```bash
-git clone --recursive https://github.com/ahmedmsalah99/Leader-Follower-PX4-Simulation.git
-cd Leader-Follower-PX4-Simulation/ros2_ws
+git clone https://github.com/ahmedmsalah99/Leader-Follower-PX4-Simulation.git
+cd Leader-Follower-PX4-Simulation
+git submodule update --init ros2_ws/src/px4_msgs SITL/Micro-XRCE-DDS-Agent
+```
+
+**2. Install PX4 v1.17.0** anywhere outside this repo:
+
+```bash
+git clone -b v1.17.0 --recursive https://github.com/PX4/PX4-Autopilot.git
+cd PX4-Autopilot
+bash ./Tools/setup/ubuntu.sh   # installs dependencies and Gazebo, reboot afterwards
+make px4_sitl
+```
+
+Already have PX4? Switch it to the release and rebuild:
+
+```bash
+cd PX4-Autopilot
+git fetch --tags && git checkout v1.17.0
+git submodule update --init --recursive
+make distclean && make px4_sitl
+```
+
+**3. Build the Micro XRCE-DDS Agent** (the PX4 ↔ ROS 2 bridge):
+
+```bash
+cd SITL/Micro-XRCE-DDS-Agent
+mkdir build && cd build
+cmake .. && make
+sudo make install && sudo ldconfig /usr/local/lib/
+```
+
+**4. Build the ROS 2 workspace** (with ROS 2 sourced; `pymavlink` comes with PX4's `ubuntu.sh`):
+
+```bash
+cd ros2_ws
 colcon build
 ```
 
+**5. QGroundControl:** download the [AppImage](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html) and place it at `SITL/QGroundControl.AppImage`.
 
+## Usage
 
-### 1. Initialize GCS and Micro XRCE-DDS
-
-This sets up QGroundControl and MAVLink to ROS2 bridge:
-
-```bash
-./init.sh
-```
-
-### 2. Launch PX4 Gazebo Simulation
-
-This starts a clean simulation with the desired number of drones:
+Run every script from `SITL/automation_scripts`, each in its own terminal:
 
 ```bash
 cd SITL/automation_scripts
-export PX4_PATH=<your-px4-folder-path>
-./launch.sh -n <drones_num> [-h]
+./init.sh                                   # 1. QGroundControl + Micro XRCE-DDS Agent
+PX4_PATH=~/PX4-Autopilot ./launch.sh -n 3   # 2. Gazebo with 3 drones
+./start_system.sh -n 3                      # 3. ROS 2 nodes: swarm manager, election, controllers
+./command_drone.sh 3                        # 4. interactive commands
 ```
 
-- `-n <drones_num>`: Number of drones to simulate
-- `-h`: Headless mode (no GUI, uses fewer resources)
+### `launch.sh` options
 
-### 3. Start the ROS2 System
+| Option | Meaning |
+|---|---|
+| `-n N` | number of drones (default 1) |
+| `-w WORLD` | Gazebo world, any file name in `$PX4_PATH/Tools/simulation/gz/worlds` without `.sdf`, e.g. `default`, `baylands`, `walls`, `windy` (default `default`) |
+| `-h` | headless (no Gazebo GUI) |
 
-Starts ROS2 nodes that:
-- Monitor the swarm
-- Control each drone
-- Handle leader election
+`PX4_PATH` must point to your PX4-Autopilot folder (`export PX4_PATH=...` once per terminal also works).
 
-```bash
-cd SITL/automation_scripts
-./start_system.sh -n <drones_num>
-```
+### `command_drone.sh` commands
 
-> Drones are assigned priorities based on their number (modifiable in the script).
-
-### 4. Command the Swarm
-
-Once the leader is elected, control the drones interactively:
-
-```bash
-cd SITL/automation_scripts
-./command_drone.sh <drones_num>
-```
+Leave out the drone number `N` to send the command to **all** drones.
 
 | Command | Effect |
 |---|---|
-| `takeoff [N]` | Arm and take off (1.5 m above home), retrying until PX4 confirms |
-| `land [N]` | Land |
-| `return [N]` | Return to launch |
-| `mission [plan_file]` | Upload a QGroundControl `.plan` (default `SITL/missions/simple_mission.plan`) to the current leader and start it |
-| `exit` | Quit |
+| `takeoff [N]` | arm and take off (1.5 m above home) |
+| `land [N]` | land |
+| `return [N]` | return to launch |
+| `mission [plan_file]` | the current leader flies a QGroundControl `.plan` (default `SITL/missions/simple_mission.plan`) |
+| `help` / `exit` | show the commands / quit |
 
-Without a drone number, `takeoff`, `land` and `return` go to all drones. Once airborne, the followers
-switch to offboard mode and follow the leader, so `mission` moves the whole swarm. Only simple waypoint
-items are supported in `.plan` files (no survey/complex items).
+Once airborne, followers switch to offboard mode and follow the leader, so `mission` moves the whole swarm.
+By default the drone with the highest number becomes the leader.
 
-## 📋 Typical Usage Flow
+## Examples
 
-1. Run `init.sh`
-2. Launch the simulation with `launch.sh -n 3` (or any number)
-3. Start the ROS2 control system with `start_system.sh -n 3`
-4. Wait for system to initialize and elect the leader
-5. Run `command_drone.sh 3`, then `takeoff`
-6. Run `mission` – the leader flies the plan and the followers follow it in real time
+Fly the bundled mission with 3 drones:
 
-
-## 🛠 Notes
-
-- Tested with **Gazebo Harmonic**
-- QGroundControl is launched via AppImage; ensure it exists in `SITL/`
-- Leader election is automatic, but the automation script can be modified to use manual priorities
-
----
-
-### 📩 Contributions
-
-Pull requests and suggestions are welcome!
-
----
-
-### 📜 License
-
-[MIT License](LICENSE)
+```bash
+PX4_PATH=~/PX4-Autopilot ./launch.sh -n 3
+./start_system.sh -n 3
+./command_drone.sh 3
+> takeoff
+> mission
+> land
 ```
+
+5 drones in the `walls` world without the Gazebo GUI:
+
+```bash
+PX4_PATH=~/PX4-Autopilot ./launch.sh -n 5 -w walls -h
+./start_system.sh -n 5
+```
+
+Command a single drone, or fly your own plan:
+
+```bash
+> takeoff 2
+> return 2
+> mission ~/my_route.plan
+```
+
+## Notes
+
+- `simple_mission.plan` uses coordinates near the `default` world origin. Worlds with a different
+  location (e.g. `baylands`) need their own plan: draw it in QGroundControl and save it as a `.plan`.
+  Only simple waypoint items are supported (no survey/complex items).
+- After changing code or `px4_msgs`, run `colcon build` again and re-source `ros2_ws/install/setup.bash`.
+- `No status updates received yet` means PX4 data isn't arriving: check that the agent is running
+  (`init.sh`) and that `ros2 topic list | grep vehicle_status` shows `/px4_1/fmu/out/vehicle_status_v1`;
+  a different name means PX4 and `px4_msgs` versions don't match.
+
+## License
+
+MIT
